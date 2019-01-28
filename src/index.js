@@ -1,2 +1,3 @@
 require('./assets/css/style.css')
-require('./randomizer')
+require('./assets/js/randomizer')
+
