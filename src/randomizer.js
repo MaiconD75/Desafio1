@@ -1,15 +1,17 @@
-const randomizer = (id) =>{
-    const Colors = ["#CCC", "#10666d", "#15fc00", "#12104f", "#000", "#cd0101", "#400040", "#f9fe23"] 
-    color = 0
-    index = Colors.length
-        setInterval(() => {
-        const color = Math.floor(Math.random() * Colors.length)
-        const c =Colors[color]
-    document.getElementById(id).style.backgroundColor = c           
-        }, 2000)
+const cor = (id) => {
+    let r = Math.floor(Math.random()* 255)
+    let g = Math.floor(Math.random()* 255)
+    let b = Math.floor(Math.random()* 255)
+    let color = `rgb(${r}, ${g}, ${b})`
+    document.getElementById(id).style.backgroundColor = color
+}
+const randomizer = () => {
+    var i = 1
+    while(i < 5){
+        var idC = 'square'
+        idC += i
+        i++
+        cor(idC)
     }
-            
-    randomizer('square1')
-    randomizer('square2')
-    randomizer('square3')
-    randomizer('square4')
+}
+randomizer()
